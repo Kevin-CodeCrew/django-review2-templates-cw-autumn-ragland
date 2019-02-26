@@ -9,12 +9,14 @@
 <div class="page-header">
     <h1>Awesome Songs</h1>
 </div>
+<!--base page-->
 {% block content %}
 <table class="table">
     <tr>
         <th>Band</th>
         <th>Song</th>
     </tr>
+    <!--iterate objects in array through a table-->
 {% for eachSong in song_list %}
     <tr>
         <td>{{eachSong.song_band}}</td>

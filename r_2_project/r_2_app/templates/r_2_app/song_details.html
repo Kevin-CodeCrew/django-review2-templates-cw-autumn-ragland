@@ -1,7 +1,7 @@
 {% extends 'r_2_app/songs.html' %}
-
+<!--child page-->
 {% block content %}
-
+<!--item specific table info-->
 <table class="table">
     <tr>
         <td>Title</td>
@@ -14,5 +14,6 @@
 </table>
 
 <a href="{% url 'list_songs' %}">Back to Home</a>
+<br>
 <a href="{% url 'more_details' song_item.song_id %}">More Details</a>
 {% endblock content %}

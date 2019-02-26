@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# given array of dict
 songs = [
     {
         'song_id': 0,
@@ -77,7 +78,7 @@ songs = [
 ]
 
 
-# Create your views here.
+# render song page
 def list_songs(request):
     context = {
         'song_list': songs
@@ -85,6 +86,7 @@ def list_songs(request):
     return render(request, 'r_2_app/songs.html', context)
 
 
+# pass index to render details
 def list_song(request, song_id):
     context = {
         'song_item': songs[song_id]
@@ -92,6 +94,7 @@ def list_song(request, song_id):
     return render(request, 'r_2_app/song_details.html', context)
 
 
+# pass index to render more details
 def more_details(request, song_id):
     context = {
         'song_item': songs[song_id]
