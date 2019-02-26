@@ -91,3 +91,10 @@ def list_song(request, song_id):
     }
     return render(request, 'r_2_app/song_details.html', context)
 
+
+def more_details(request, song_id):
+    context = {
+        'song_item': songs[song_id]
+    }
+    return render(request, 'r_2_app/song_details_2.html', context)
+

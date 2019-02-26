@@ -1,0 +1,22 @@
+{% extends 'r_2_app/songs.html' %}
+
+{% block content %}
+
+<table class="table">
+    <tr>
+        <td>Album</td>
+        <td>{{song_item.song_album}}</td>
+    </tr>
+    <tr>
+        <td>Lyrics</td>
+        <td><a href="{{song_item.song_lyrics}}" target="_blank">Genius</a></td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+        <td><a href="{{song_item.song_audio}}" target="_blank">Youtube</a></td>
+    </tr>
+</table>
+
+<a href="{% url 'song_details' song_item.song_id %}">Back to Song</a>
+<a href="{% url 'list_songs' %}">Back to Home</a>
+{% endblock content %}
